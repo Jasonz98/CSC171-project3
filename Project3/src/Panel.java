@@ -102,3 +102,12 @@ public class Panel extends JFrame implements ActionListener,MouseMotionListener,
 		
 	}
 }
+public class App {
+	public static void main(String [] args){
+		JFrame frame = new JFrame("Firework Show");
+		Panel panel = new Panel();
+		panel.setVisible(true);
+		panel.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.add(panel);
+	}
+}
