@@ -1,33 +1,42 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.Graphics;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
-
+import java.util.Random;
+import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JSlider;
+import javax.swing.JTextField;
+import javax.swing.Timer;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 public class Panel extends JFrame implements ActionListener,MouseMotionListener,MouseListener{
 	JPanel Modes;
-	JButton Mode1, Mode2, Mode3,Color1,Color2,Color3;
+	JButton Mode1, Mode2, Mode3,Mode4,Mode5,Color1,Color2,Color3;
 	
 	JPanel bar;
 	
-	JButton fire;
+	//JButton fire;
 
-	JButton focus;
+	//JButton focus;
 	
-	JLabel colorL,modeL,speedL;
+	//JLabel colorL,modeL,speedL;
 	
 	
 	
 	public Panel(){
 		super("FIREWORK SHOW");
-		// setPreferredSize(new Dimension(950,950));
+		setPreferredSize(new Dimension(950,950));
 		setLayout(new BorderLayout());
 		
 		addMouseListener(this);
@@ -35,20 +44,28 @@ public class Panel extends JFrame implements ActionListener,MouseMotionListener,
 		
 		Modes = new JPanel();
 		Mode1 = new JButton("Mode 1");
+		Mode2 = new JButton("Mode 2");
+		Mode3 = new JButton("Mode 3");
+		Mode4 = new JButton("Mode 4");
+		Mode5 = new JButton("Mode 5");
 		
-		colorL = new JLabel("The current color is random");
+		//colorL = new JLabel("The current color is random");
 		
+		bar=new JPanel();
+		bar.setLayout(new GridLayout(2,3,2,2));
 		bar.add(Mode1);
 		bar.add(Mode2);
 		bar.add(Mode3);
+		bar.add(Mode4);
+		bar.add(Mode5);
 	
-		billy niubi
+		
 		
 		
 		
 		bar.setBackground(Color.WHITE);
 		Modes.setBackground(Color.WHITE);
-		add(bar,BorderLayout.EAST);
+		add(bar,BorderLayout.SOUTH);
 		pack();
 	}
 	@Override
@@ -84,15 +101,4 @@ public class Panel extends JFrame implements ActionListener,MouseMotionListener,
 		// TODO Auto-generated method stub
 		
 	}
-	
-public static void main(String[]args) {
-	 JFrame frame = new JFrame("HW");
-	 Panel canvas = new Panel();
-	 frame.add(canvas);
-	 frame.setSize(450,450);
-	 
-	 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	 frame.setVisible(true);
-}
-	
 }
