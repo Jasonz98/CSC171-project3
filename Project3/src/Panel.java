@@ -1,71 +1,105 @@
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.FlowLayout;
-import java.awt.Graphics;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
-import java.util.Random;
-import javax.swing.BoxLayout;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JSlider;
-import javax.swing.JTextField;
-import javax.swing.Timer;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
 public class Panel extends JFrame implements ActionListener,MouseMotionListener,MouseListener{
-	JPanel Modes;
-	JButton Mode1, Mode2, Mode3,Mode4,Mode5,Color1,Color2,Color3;
+	private static final long serialVersionUID = 1L;
+	JPanel gaget;
+	JMenuItem Mode1;
+	JMenuItem Mode2;
+	JMenuItem Mode3;
+	JMenuItem Mode4;
+	JMenuItem Mode5;
 	
-	JPanel bar;
+	JMenuItem Color1;
+	JMenuItem Color2;
+	JMenuItem Color3;
+	JMenuItem Color4;
+	JMenuItem Color5;
 	
-	//JButton fire;
-
-	//JButton focus;
-	
-	//JLabel colorL,modeL,speedL;
+	JSlider velocity;
+	JSlider angel;
+	JSlider delay;
 	
 	
 	
+	JMenu Mode;
+	JMenu Color;
+	JMenuBar bar;
+	
+	JButton fire;
+	JButton focus;
 	public Panel(){
 		super("FIREWORK SHOW");
-		setPreferredSize(new Dimension(950,950));
+		setPreferredSize(new Dimension(1920,950));
 		setLayout(new BorderLayout());
 		
 		addMouseListener(this);
 		addMouseMotionListener(this);
 		
-		Modes = new JPanel();
-		Mode1 = new JButton("Mode 1");
-		Mode2 = new JButton("Mode 2");
-		Mode3 = new JButton("Mode 3");
-		Mode4 = new JButton("Mode 4");
-		Mode5 = new JButton("Mode 5");
+		bar = new JMenuBar();
+		gaget = new JPanel();
 		
-		//colorL = new JLabel("The current color is random");
+		fire = new JButton("Fire");
+		// build the Mode menu
+		Mode = new JMenu("Modes");
+		Mode1 = new JMenuItem("Mode1");
+		Mode2 = new JMenuItem("Mode2");
+		Mode3 = new JMenuItem("Mode3");
+		Mode4 = new JMenuItem("Mode4");
+		Mode5 = new JMenuItem("Mode5");
+		Mode.add(Mode1);
+		Mode.add(Mode2);
+		Mode.add(Mode3);
+		Mode.add(Mode4);
+		Mode.add(Mode5);
+		// build the Color menu
+		Color = new JMenu("Colors");
+		Color1 = new JMenuItem("Color1");
+		Color2 = new JMenuItem("Color2");
+		Color3 = new JMenuItem("Color3");
+		Color4 = new JMenuItem("Color4");
+		Color5 = new JMenuItem("Color5");
+		Color.add(Color1);
+		Color.add(Color2);
+		Color.add(Color3);
+		Color.add(Color4);
+		Color.add(Color5);
 		
-		bar=new JPanel();
-		bar.setLayout(new GridLayout(2,3,2,2));
-		bar.add(Mode1);
-		bar.add(Mode2);
-		bar.add(Mode3);
-		bar.add(Mode4);
-		bar.add(Mode5);
+		//Parameters
+		velocity = new JSlider(0,100);
+		angel = new JSlider(0,100);
+		delay = new JSlider(0,100);
+		
+		//add bar to gaget
+		gaget.add(bar);
+		gaget.setLayout(new GridLayout(2,2));
+		//add menus to bar
+		bar.add(Mode);
+		bar.add(Color);
+		//add fire to gaget
+		gaget.add(fire);
+		gaget.add(velocity);
+		gaget.add(angel);
+		gaget.add(delay);
+		
+		
+		
+		
 	
-		
-		
-		
-		
-		bar.setBackground(Color.WHITE);
-		Modes.setBackground(Color.WHITE);
-		add(bar,BorderLayout.SOUTH);
+		add(gaget,BorderLayout.SOUTH);
 		pack();
 	}
 	@Override
@@ -97,17 +131,14 @@ public class Panel extends JFrame implements ActionListener,MouseMotionListener,
 		// TODO Auto-generated method stub	
 	}
 	@Override
-	public void actionPerformed(ActionEvent arg0) {
-		// TODO Auto-generated method stub
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource()==Mode){
+			//Mode.setTitle(e);
+			
+		}
+		else if (e.getSource()==Color){
+			
+		}
 		
-	}
-}
-public class App {
-	public static void main(String [] args){
-		JFrame frame = new JFrame("Firework Show");
-		Panel panel = new Panel();
-		panel.setVisible(true);
-		panel.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.add(panel);
 	}
 }
