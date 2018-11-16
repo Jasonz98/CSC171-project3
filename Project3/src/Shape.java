@@ -4,9 +4,8 @@ import javax.swing.JComponent;
 import javax.swing.JFrame;
 
 public class Shape extends JComponent {
-    int xOne;
-    int yOne;
-    int v = 100;
+	
+	
     
 	@Override
 	public void paintComponent(Graphics g) {
