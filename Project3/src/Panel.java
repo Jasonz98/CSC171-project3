@@ -42,7 +42,7 @@ public class Panel extends JFrame implements ActionListener,MouseMotionListener,
 		bar.add(Mode2);
 		bar.add(Mode3);
 	
-		
+		billy niubi
 		
 		
 		
