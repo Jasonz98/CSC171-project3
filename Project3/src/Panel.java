@@ -24,10 +24,9 @@ public class Panel extends JFrame implements ActionListener{
 	JMenuItem Mode3;
 	JMenuItem Mode4;
 	JMenuItem Mode5;
-<<<<<<< HEAD
 
-=======
->>>>>>> 6dc827a597ed93ece784d70fa65d064bfe24dfe4
+
+
 	
 	JMenuItem Color1;
 	JMenuItem Color2;
@@ -48,21 +47,21 @@ public class Panel extends JFrame implements ActionListener{
 	JButton fire;
 	JButton focus;
 	public Panel(){
-<<<<<<< HEAD
+
 
 		super("FIREWORK SHOW");
 		setPreferredSize(new Dimension(1920,950));
 
 		setLayout(new BorderLayout());
 		add(bar,BorderLayout.SOUTH);
-=======
+
 		super("FIREWORK SHOW");
 		setPreferredSize(new Dimension(1920,950));
 		setLayout(new BorderLayout());
 		
 		addMouseListener(this);
 		addMouseMotionListener(this);
->>>>>>> 6dc827a597ed93ece784d70fa65d064bfe24dfe4
+
 		
 		bar = new JMenuBar();
 		gaget = new JPanel();
@@ -109,29 +108,15 @@ public class Panel extends JFrame implements ActionListener{
 		gaget.add(velocity);
 		gaget.add(angel);
 		gaget.add(delay);
-<<<<<<< HEAD
-
-=======
->>>>>>> 6dc827a597ed93ece784d70fa65d064bfe24dfe4
-		
-		
-		
-<<<<<<< HEAD
-
 		add(bar,BorderLayout.EAST);*/
 
-=======
->>>>>>> 6dc827a597ed93ece784d70fa65d064bfe24dfe4
+
 		
 	
 		add(gaget,BorderLayout.SOUTH);
 		pack();
 	}
-<<<<<<< HEAD
 
-
-
-=======
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub	
@@ -160,7 +145,6 @@ public class Panel extends JFrame implements ActionListener{
 	public void mouseMoved(MouseEvent e) {
 		// TODO Auto-generated method stub	
 	}
->>>>>>> 6dc827a597ed93ece784d70fa65d064bfe24dfe4
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource()==Mode){
@@ -172,7 +156,6 @@ public class Panel extends JFrame implements ActionListener{
 		}
 		
 	}
-<<<<<<< HEAD
 
 	
 public static void main(String[]args) {
@@ -186,6 +169,11 @@ public static void main(String[]args) {
 }
 	
 
-=======
->>>>>>> 6dc827a597ed93ece784d70fa65d064bfe24dfe4
+	public static void main(String [] args){
+		JFrame frame = new JFrame("Firework Show");
+		Panel panel = new Panel();
+		panel.setVisible(true);
+		panel.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.add(panel);
+	}
 }
