@@ -1,10 +1,6 @@
 import java.awt.BorderLayout;
-<<<<<<< HEAD
-import java.awt.Color;
-=======
 import java.awt.Dimension;
 import java.awt.GridLayout;
->>>>>>> 1b240fe8f8a6265d9a6811742b6990f0c98cf074
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
@@ -12,18 +8,11 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
 import javax.swing.JButton;
-import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
-<<<<<<< HEAD
-
-public class Panel extends JComponent implements ActionListener{
-	
-	JButton Mode1, Mode2, Mode3,Color1,Color2,Color3;
-=======
 import javax.swing.JSlider;
 public class Panel extends JFrame implements ActionListener,MouseMotionListener,MouseListener{
 	private static final long serialVersionUID = 1L;
@@ -33,7 +22,6 @@ public class Panel extends JFrame implements ActionListener,MouseMotionListener,
 	JMenuItem Mode3;
 	JMenuItem Mode4;
 	JMenuItem Mode5;
->>>>>>> 1b240fe8f8a6265d9a6811742b6990f0c98cf074
 	
 	JMenuItem Color1;
 	JMenuItem Color2;
@@ -54,21 +42,10 @@ public class Panel extends JFrame implements ActionListener,MouseMotionListener,
 	JButton fire;
 	JButton focus;
 	public Panel(){
-<<<<<<< HEAD
-	
-=======
 		super("FIREWORK SHOW");
 		setPreferredSize(new Dimension(1920,950));
->>>>>>> 1b240fe8f8a6265d9a6811742b6990f0c98cf074
 		setLayout(new BorderLayout());
-		add(bar,BorderLayout.SOUTH);
-		bar.setBackground(Color.GREEN);
-	
-	
 		
-<<<<<<< HEAD
-		
-=======
 		addMouseListener(this);
 		addMouseMotionListener(this);
 		
@@ -117,14 +94,9 @@ public class Panel extends JFrame implements ActionListener,MouseMotionListener,
 		gaget.add(velocity);
 		gaget.add(angel);
 		gaget.add(delay);
->>>>>>> 1b240fe8f8a6265d9a6811742b6990f0c98cf074
 		
 		
-		/*bar.setBackground(Color.WHITE);
 		
-<<<<<<< HEAD
-		add(bar,BorderLayout.EAST);*/
-=======
 		
 	
 		add(gaget,BorderLayout.SOUTH);
@@ -157,9 +129,7 @@ public class Panel extends JFrame implements ActionListener,MouseMotionListener,
 	@Override
 	public void mouseMoved(MouseEvent e) {
 		// TODO Auto-generated method stub	
->>>>>>> 1b240fe8f8a6265d9a6811742b6990f0c98cf074
 	}
-
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource()==Mode){
@@ -171,18 +141,4 @@ public class Panel extends JFrame implements ActionListener,MouseMotionListener,
 		}
 		
 	}
-<<<<<<< HEAD
-	
-public static void main(String[]args) {
-	 JFrame frame = new JFrame("HW");
-	 Panel canvas = new Panel();
-	 frame.add(canvas);
-	 frame.setSize(1000,500);
-	 
-	 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	 frame.setVisible(true);
-}
-	
-=======
->>>>>>> 1b240fe8f8a6265d9a6811742b6990f0c98cf074
 }
